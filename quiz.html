@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <style>
+        p{
+            font-size: 20px;
+            text-transform: capitalize;
+            font-weight: bolder;
+        }
+        .p{
+            font-size: 22px;
+            padding: 5px;
+        }
+        .p span{
+            font-size: 30px;
+            padding: 15px;
+        }
+        .m{
+            font-size: 34px;
+        }
+        .row{
+            margin-top: 50px;
+        }
+         .col-sm{
+            font-size: 20px;
+            font-weight: bold;
+         }
+         .fl{
+            display: flex;
+            justify-content: space-between;
+         }
+         .container{
+            overflow: hidden;
+         }
+         #fle{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+         }
+         #grade{
+            font-size: 32px;
+            font-weight: bold;
+         }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class=" text-success text-center" style="font-size: 30px;">Quiz game</div>
+        <div class="main jumbotron">
+            <p class="text-center text-primary">which language is best for web development ?</p>
+            <ul class="container">
+                <div class="row text-dark">
+                    <div class="col-sm"><input type="radio" name="quiz" value="C">  C</div>
+                    <div class="col-sm"><input type="radio" name="quiz"value="C++">  C++</div>
+                    <div class="col-sm"><input type="radio" name="quiz" value="Javascript">  Javascript</div>
+                    <div class="col-sm"><input type="radio" name="quiz"value="Ruby">  Ruby</div>
+                </div>
+            </ul>
+            <div class="fl">
+                <button class="btn btn-primary mt-4" >Next -></button>
+            </div>
+        </div>
+        
+        <div class="main jumbotron" hidden>
+            <p class="text-center text-primary">Which tag is use for text BOLD ?</p>
+            <ul class="container">
+                <div class="row text-dark">
+                    <div class="col-sm"><input type="radio" name="qiz" value="b-Tag">  b -Tag</div>
+                    <div class="col-sm"><input type="radio" name="qiz" value="a-Tag">   a-Tag </div>
+                    <div class="col-sm"><input type="radio" name="qiz" value="br-Tag">  br-Tag</div>
+                    <div class="col-sm"><input type="radio" name="qiz" value="hr-Tag">  hr-Tag</div>
+                </div>
+            </ul>
+            <div class="fl">
+                <button class="btn btn-primary mt-4">Previous</button>
+                <button class="btn btn-primary mt-4">Next -></button>
+            </div>
+        </div>
+        <div class="main jumbotron"hidden>
+            <p class="text-center text-primary">Pick a correct CSS framework ?</p>
+            <ul class="container">
+                <div class="row text-dark">
+                    <div class="col-sm"><input type="radio" name="quz" value="React">  React</div>
+                    <div class="col-sm"><input type="radio" name="quz" value="Node JS">   Node JS</div>
+                    <div class="col-sm"><input type="radio" name="quz" value="Angular">  Angular</div>
+                    <div class="col-sm"><input type="radio" name="quz" value="Bootstrap">  Bootstrap</div>
+                </div>
+            </ul>
+            <div class="fl">
+                <button class="btn btn-primary mt-4">Previous</button>
+                <button class="btn btn-primary mt-4">Next -></button>
+            </div>
+        </div>
+        <div class="main jumbotron"hidden>
+            <p class="text-center text-primary">Select a correct bootstrap class ?</p>
+            <ul class="container">
+                <div class="row text-dark">
+                    <div class="col-sm"><input type="radio" name="uiz" value="flex">  flex</div>
+                    <div class="col-sm"><input type="radio" name="uiz" value="grid">   grid </div>
+                    <div class="col-sm"><input type="radio" name="uiz" value="btn">  btn</div>
+                    <div class="col-sm"><input type="radio" name="uiz" value="radio">  radio</div>
+                </div>
+            </ul>
+            <div class="fl">
+                <button class="btn btn-primary mt-4">Previous</button>
+                <button class="btn btn-primary mt-4">Next -></button>
+            </div>
+        </div>
+        <div class="main jumbotron"hidden>
+            <p class="text-center text-primary">the primary color is?</p>
+            <ul class="container">
+                <div class="row text-dark">
+                    <div class="col-sm"><input type="radio" name="qui" value="Blue">  Blue</div>
+                    <div class="col-sm"><input type="radio" name="qui" value="Green">   Green </div>
+                    <div class="col-sm"><input type="radio" name="qui" value="Yellow">  Yellow</div>
+                    <div class="col-sm"><input type="radio" name="qui" value="Red">  Red</div>
+                </div>
+            </ul>
+            <div class="fl">
+                <button class="btn btn-primary mt-4">Previous</button>
+                <button class="btn btn-success mt-4 ">Submit</button>
+            </div>
+        </div>
+        <div class=" main jumbotron" hidden style="min-height: 200px;">
+            <h2 class="text-success text-center">Your Results ..!</h2><hr>
+            <p class="text-primary p">Total Number of Questions:<span class="text-info">5</span></p>
+            <p class="text-success p">Correct Questions: <span class="text-success" id="cor">0</span></p>
+            <p class="text-danger p">wrong Questions:<span class="text-danger" id="wro">0</span></p>
+            <p class="text-dark p">Missed Questions <span class="text-dark" id="mis">0</span></p>
+            <hr>
+           <div id="fle" style="min-height: 100px;">
+            <p class="text-success m p">Your Grade is:</p>
+            <p class="text-center p" id="grade"></p>
+           </div>
+          
+        </div>
+    </div>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+        let main=document.querySelectorAll('.main');
+let btn=document.querySelectorAll('.btn')
+let correct=0;
+let wrong=0;
+let miss=0;
+//console.log(btn[0]);
+btn[0].addEventListener('click',()=>{
+    main[0].hidden=true;
+    main[1].hidden=false;
+});
+btn[1].addEventListener('click',()=>{
+    main[1].hidden=true;
+    main[0].hidden=false;
+})
+btn[2].addEventListener('click',()=>{
+    main[2].hidden=false;
+    main[1].hidden=true;
+    main[0].hidden=true;
+})
+btn[3].addEventListener('click',()=>{
+    main[2].hidden=true;
+    main[1].hidden=false;
+    main[0].hidden=true;
+})
+btn[4].addEventListener('click',()=>{
+    main[2].hidden=true;
+    main[1].hidden=true;
+    main[0].hidden=true;
+    main[3].hidden=false;
+})
+btn[5].addEventListener('click',()=>{
+    main[2].hidden=false;
+    main[1].hidden=true;
+    main[0].hidden=true;
+    main[3].hidden=true;
+})
+btn[6].addEventListener('click',()=>{
+    main[2].hidden=true;
+    main[1].hidden=true;
+    main[0].hidden=true;
+    main[3].hidden=true;
+    main[4].hidden=false;
+})
+btn[7].addEventListener('click',()=>{
+    main[2].hidden=true;
+    main[1].hidden=true;
+    main[0].hidden=true;
+    main[3].hidden=false;
+    main[4].hidden=true;
+})
+btn[8].addEventListener('click',()=>{
+    //alert('Your Game is Submit Succesfully');
+    let a=document.getElementsByName('quiz');
+    let b=document.getElementsByName('qiz');
+    let c=document.getElementsByName('quz');
+    let d=document.getElementsByName('uiz');
+    let e=document.getElementsByName('qui');
+    a.forEach((value)=>{
+        if(value.checked==true){
+            if(value.value=="Javascript"){
+                correct++;
+            }
+            else{
+                wrong++;
+            }
+        }
+    })
+    b.forEach((value)=>{
+        if(value.checked==true){
+            if(value.value=="b-Tag"){
+                correct++;
+            }
+            else{
+                wrong++;
+            }
+        }
+    })
+    c.forEach((value)=>{
+        if(value.checked==true){
+            if(value.value=="Bootstrap"){
+                correct++;
+            }
+            else{
+                wrong++;
+            }
+        }
+    })
+    d.forEach((value)=>{
+        if(value.checked==true){
+            if(value.value=="btn"){
+                correct++;
+            }
+            else{
+                wrong++;
+            }
+        }
+    })
+    e.forEach((value)=>{
+        if(value.checked==true){
+            if(value.value=="Blue"){
+                correct++;
+            }
+            else{
+                wrong++;
+            }
+        }
+    })
+    document.getElementById('cor').innerHTML=correct;
+    document.getElementById('wro').innerHTML=wrong;
+    document.getElementById('mis').innerHTML=5-(correct+wrong);
+    let grade=document.getElementById('grade');
+    if(correct==5){
+        grade.innerHTML="Excellent..!";
+        grade.className+=" text-success";
+    }
+    else if(correct==0){
+        grade.innerHTML="Fail";
+        grade.className+=" text-danger";
+    }
+    else if(correct==4 || correct==3){
+        grade.innerHTML="Good..!";
+        grade.className+=" text-primary";
+    }
+    else
+    if(correct==2||correct==1){
+        grade.innerHTML="Learn More..!";
+        grade.className+=" text-info";
+    }
+
+    console.log(correct);
+    console.log(wrong);
+    main[5].hidden=false;
+    main[0].hidden=true;
+    main[1].hidden=true;
+    main[2].hidden=true;
+    main[3].hidden=true;
+    main[4].hidden=true;
+})
+    </script>
+</body>
+</html>
